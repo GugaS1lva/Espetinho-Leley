@@ -16,7 +16,7 @@ export function Hero({ onCta }: { onCta: () => void }) {
       />
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/60 to-transparent" />
       <div className="absolute inset-0 bg-aurora opacity-70" />
-      <Embers count={18} />
+      <Embers count={28} />
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-20 md:grid-cols-2 md:py-32">
         <div className="animate-rise">
           <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-secondary/40 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">

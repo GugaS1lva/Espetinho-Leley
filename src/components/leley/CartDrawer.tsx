@@ -30,11 +30,14 @@ export function CartDrawer({
   const checkout = () => {
     if (!customer) { onNeedCustomer(); return; }
     const lines = items.map((i) => `• ${i.qty}x ${i.product.name} — ${brl(i.product.price * i.qty)}`).join("\n");
+    const addressLine = customer.address
+      ? `*Endereço:* ${customer.address}\n`
+      : `*Endereço:* a combinar por aqui 📍\n`;
     const msg =
       `*Novo pedido — ${BRAND.name}*\n\n` +
       `*Cliente:* ${customer.name}\n` +
       `*Telefone:* ${customer.phone}\n` +
-      `*Endereço:* ${customer.address}\n\n` +
+      addressLine + `\n` +
       `*Itens:*\n${lines}\n\n` +
       `*Total:* ${brl(total)}\n\n`;
     const url = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(msg)}`;

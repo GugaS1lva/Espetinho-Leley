@@ -10,7 +10,7 @@ export function InfoSections() {
     <>
       <section id="horarios" className="relative overflow-hidden bg-gradient-charcoal py-16 text-secondary-foreground md:py-24">
         <div className="absolute inset-0 bg-aurora opacity-50" />
-        <Embers count={10} />
+        <Embers count={18} />
         <div className="relative mx-auto max-w-6xl px-4">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Funcionamento</p>
           <h2 className="mt-2 font-display text-4xl font-semibold md:text-5xl">Aberto todos os dias.</h2>
@@ -23,7 +23,8 @@ export function InfoSections() {
         </div>
       </section>
 
-      <section id="sobre" className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <section id="sobre" className="relative bg-warm-smoke">
+        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-24">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Nossa história</p>
@@ -38,6 +39,7 @@ export function InfoSections() {
             </p>
           </div>
           <TeamSlideshow />
+        </div>
         </div>
       </section>
 

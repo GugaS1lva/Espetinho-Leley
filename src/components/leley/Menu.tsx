@@ -6,7 +6,8 @@ export function Menu({ onAdd }: { onAdd: (p: Product) => void }) {
   const [active, setActive] = useState(CATEGORIES[0].id);
 
   return (
-    <section id="cardapio" className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+    <section id="cardapio" className="relative bg-warm-smoke">
+      <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-24">
       <div className="flex items-end justify-between gap-4">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Cardápio</p>
@@ -84,6 +85,7 @@ export function Menu({ onAdd }: { onAdd: (p: Product) => void }) {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

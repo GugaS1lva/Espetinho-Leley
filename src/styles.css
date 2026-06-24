@@ -222,6 +222,34 @@
     animation: hero-pan 18s ease-in-out infinite;
   }
 
+  /* Warm "smoke" backdrop for light sections — charcoal embers feel */
+  .bg-warm-smoke {
+    background-color: var(--background);
+    background-image:
+      radial-gradient(45% 40% at 10% 5%, oklch(0.74 0.2 55 / 0.22), transparent 70%),
+      radial-gradient(50% 45% at 92% 15%, oklch(0.58 0.235 28 / 0.18), transparent 70%),
+      radial-gradient(40% 38% at 25% 95%, oklch(0.72 0.21 50 / 0.20), transparent 70%),
+      radial-gradient(55% 50% at 80% 90%, oklch(0.58 0.235 28 / 0.15), transparent 70%),
+      radial-gradient(35% 30% at 55% 50%, oklch(0.74 0.2 55 / 0.10), transparent 75%),
+      repeating-linear-gradient(
+        135deg,
+        oklch(0.16 0.015 40 / 0.03) 0 2px,
+        transparent 2px 7px
+      );
+  }
+  .bg-warm-smoke::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 20% 30%, oklch(0.16 0.015 40 / 0.06) 0.6px, transparent 1.2px),
+      radial-gradient(circle at 70% 60%, oklch(0.16 0.015 40 / 0.05) 0.6px, transparent 1.2px),
+      radial-gradient(circle at 45% 80%, oklch(0.58 0.235 28 / 0.06) 0.6px, transparent 1.2px);
+    background-size: 22px 22px, 30px 30px, 38px 38px;
+    opacity: 0.9;
+  }
+
   .ember {
     position: absolute;
     bottom: -10px;
